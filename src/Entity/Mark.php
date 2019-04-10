@@ -47,7 +47,7 @@ class Mark
     {
         return $this->mark_value;
     }
-
+    
     public function setMarkValue(int $mark_value): self
     {
         $this->mark_value = $mark_value;

@@ -3,6 +3,7 @@
 namespace App\Repository;
 
 use App\Entity\Movie;
+use App\Entity\Mark;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
@@ -28,6 +29,17 @@ class MovieRepository extends ServiceEntityRepository
         ];
     }
 
+    public function getMovieWithMark(Movie $movie)
+    {
+        $avg_mark_value = $this->getAvgMark($movie); 
+        return [
+            'id' => (int) $movie->getId(),
+            'title' => (string) $movie->getTitle(),
+            'description' => (string) $movie->getDescription(),
+            'avg_mark_value' => $avg_mark_value
+        ];
+    }
+
     public function getAllMovies()
     {
         $movies = $this->findAll();
@@ -38,6 +50,20 @@ class MovieRepository extends ServiceEntityRepository
         }
 
         return $moviesArray;
+    }
+
+    public function  getAvgMark(Movie $movie)
+    {
+        $entityManager = $this->getEntityManager();
+
+        $sql = "SELECT AVG(M.mark_value) AS avg_value 
+                FROM App\Entity\Mark AS M 
+                WHERE M.movie = :movie";
+
+        $query = $entityManager->createQuery($sql)->setParameter('movie', $movie->getId());
+        $avg_mark_value = $query->execute();
+
+        return $avg_mark_value[0]['avg_value'];
     }
 
 }

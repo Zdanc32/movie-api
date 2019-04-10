@@ -15,7 +15,6 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
-
 class MoviesController extends ApiController
 {
     /**
@@ -23,7 +22,6 @@ class MoviesController extends ApiController
      * @param MovieRepository $movieRepository
      * @return Symfony\Component\HttpFoundation\JsonResponse
      */
-
     public function moviesAction(MovieRepository $movieRepository)
     {
         $movies = $movieRepository->getAllMovies();
@@ -39,7 +37,7 @@ class MoviesController extends ApiController
      */
     public function movieAction(Movie $movie, MovieRepository $movieRepository)
     {
-        $movie_details = $movieRepository->getMovie($movie);
+        $movie_details = $movieRepository->getMovieWithMark($movie);
 
         if ( ! $movie) {
             $this->respondNotFound();
@@ -47,4 +45,5 @@ class MoviesController extends ApiController
 
         return $this->respond($movie_details);
     }
+
 }
