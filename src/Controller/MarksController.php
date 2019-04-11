@@ -9,8 +9,9 @@
 namespace App\Controller;
 
 use Symfony\Component\Routing\Annotation\Route;
-use App\Entity\Mark;
+use App\Entity\Movie;
 use App\Repository\MarkRepository;
+use App\Repository\MovieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -26,31 +27,34 @@ class MarksController extends ApiController
         $this->movieRepository = $movieRepository;
         $this->markRepository = $markRepository;
     }
-    
+
     /**
-     * @Route("/create/{movie}", methods="POST")
-     * @param MarkRepository $markRepository
+     * @Route("/marks/create/{movie}", methods="POST")
+     * @param Movie $movie
+     * @param Request $request
+     * @param EntityManagerInterface $em
      * @return Symfony\Component\HttpFoundation\JsonResponse
      */
-    public function createAction(Movie $movie, Request $request)
+    public function createAction(Movie $movie, Request $request, EntityManagerInterface $em)
     {
         if ( ! $request) {
             return $this->respondValidationError('Nieprawidłowe żądanie!');
         }
 
-        if ( ! $movie) {
-            $this->respondNotFound();
-        }
-
         if ( ! $request->get('mark_value')) {
             return $this->respondValidationError('Podaj ocene filmu!');
         }
-        $movie_id = $request->get('movie_id');
-        $movie =  
 
-        $mark = $markRepository->addMark($movie);
+        if ($request->get('mark_value') > 10) {
+            return $this->respondValidationError('Ocena ma złą wartość!');
+        }
 
-        return $this->respond($movies);
+
+        $mark_value = $request->get('mark_value');
+
+        $mark = $this->markRepository->addMark($movie, $mark_value, $em);
+        $created_mark = $this->markRepository->getMark($mark);
+        return $this->respondCreated($created_mark);
     }
 
 }

@@ -17,32 +17,32 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 class MoviesController extends ApiController
 {
+    private $movieRepository;
+
+    public function __construct(MovieRepository $movieRepository)
+    {
+        $this->movieRepository = $movieRepository;
+    }
+
     /**
      * @Route("/movies", methods="GET")
-     * @param MovieRepository $movieRepository
      * @return Symfony\Component\HttpFoundation\JsonResponse
      */
-    public function moviesAction(MovieRepository $movieRepository)
+    public function indexAction()
     {
-        $movies = $movieRepository->getAllMovies();
+        $movies = $this->movieRepository->getAllMovies();
 
         return $this->respond($movies);
     }
 
     /**
-     * @Route("/movie/{movie}", methods="GET")
+     * @Route("movies/details/{movie}", methods="GET")
      * @param Movie $movie
-     * @param MovieRepository $movieRepository
      * @return Symfony\Component\HttpFoundation\JsonResponse
      */
-    public function movieAction(Movie $movie, MovieRepository $movieRepository)
+    public function detailsAction(Movie $movie)
     {
-        $movie_details = $movieRepository->getMovieWithMark($movie);
-
-        if ( ! $movie) {
-            $this->respondNotFound();
-        }
-
+        $movie_details = $this->movieRepository->getMovieWithMark($movie);
         return $this->respond($movie_details);
     }
 
