@@ -21,7 +21,7 @@ url directory repositories <br>
 
 <h2>Install</h2>
 If you want try to add something more to this service, you can download on you PC or Laptop and build this project. <br>
-But you have to install some programs. 
+But you have to install some programs. <br>
 * composer https://getcomposer.org/download/
 * MySql https://dev.mysql.com/downloads/installer/
 * Symfony https://symfony.com/doc/current/setup.html
@@ -29,7 +29,7 @@ But you have to install some programs.
 * apache2 https://www.apachefriends.org/pl/index.html <br> I prepere file .htaccess (movie-api/public) if you want use apache server 
 
 When you install composer and MySql you have to clone this project<br>
-then you have to select folder and run CMD or BUSH console and wirte simple command
+then you have to select folder and run CMD or BUSH console and wirte simple command <br>
 * linux: composer install 
 * windows: php composer install
 
