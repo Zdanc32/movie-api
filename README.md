@@ -12,16 +12,12 @@ service use:
 </ul>
 <h2>Testing</h2>
 If you want testing this web service you can go to specifict url adress. List below
-<br>
 <h3>GET method</h3>
-<br>
 <ul>
  <li>http://104.248.246.56/movies return Json with all movies in the data base table</li>
  <li>http://104.248.246.56/movies/details/10 return Json with one record with movie details. Where 10 is movie id</li>
 </ul>
-<br>
-<h3>POST method</h3>
-<br>
+<h3>POST method</h3
 <ul>
  <li> http://104.248.246.56/marks/create/10/?mark_value=4 This method add mark to movie. <br>
 10 is movie id and mark_value is selected mark. Mark value can be less than 1 and bigger than 10
@@ -31,7 +27,6 @@ If you want testing this web service you can go to specifict url adress. List be
 <h2>Install</h2>
 If you want try to add something more to this service, you can download on you PC or Laptop and build this project. <br>
 But you have to install some programs. 
-<br>
 <ul>
  <li>composer https://getcomposer.org/download/</li>
  <li>MySql https://dev.mysql.com/downloads/installer/</li>
@@ -39,7 +34,6 @@ But you have to install some programs.
  <li>nginx https://www.nginx.com/resources/wiki/start/</li>
  <li>apache2 https://www.apachefriends.org/pl/index.html </li> 
 </ul>
-<br> 
 I prepere file .htaccess (movie-api/public) if you want use apache server 
 
 When you install composer and MySql you have to clone this project.<br>
