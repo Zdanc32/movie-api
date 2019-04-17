@@ -20,7 +20,7 @@ url directory repositories <br>
 * http://104.248.246.56/marks/create/10/?mark_value=4 This method add mark to movie. <br>
 10 is movie id and mark_value is selected mark. Mark value can be less than 1 and bigger than 10
 
-<h2>Install<h2>
+<h2>Install</h2>
 If you want try to add something more to this service, you can download on you PC or Laptop and build this project. <br>
 But you have to install some programs. 
 * composer https://getcomposer.org/download/
