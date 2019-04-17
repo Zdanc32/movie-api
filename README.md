@@ -13,26 +13,21 @@ service use:
 <h2>Usage</h2>
 If you want to test this web service you can go to one of those specific url adresses. 
 List is down below:
-<br>
 <h3>GET method</h3>
-<br>
 <ul>
  <li>http://104.248.246.56/movies Returns json with all movies in the data base table.</li>
  <li>http://104.248.246.56/movies/details/10 Returns json with one record with the movie details. Where 10 is the movie id.</li>
 </ul>
-<br>
 <h3>POST method</h3>
-<br>
 <ul>
  <li> http://104.248.246.56/marks/create/10/?mark_value=4 This method adds mark to the movie. <br>
 Where 10 is the movie id and mark_value is selected mark. Mark value cannot be less than 1 and bigger than 10.
  </li>
 </ul>
 
-<h2>Install</h2>
-If you want try to add something more to this service, you can download it on your PC or Laptop and build this project. <br>
+<h2>Installation</h2>
+If you want to add something more to this service, you can download it on your PC or laptop and build this project. <br>
 But you have to install some programs. 
-<br>
 <ul>
  <li>composer https://getcomposer.org/download/</li>
  <li>MySql https://dev.mysql.com/downloads/installer/</li>
