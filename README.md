@@ -44,8 +44,8 @@ I prepere file .htaccess (movie-api/public) if you want use apache server
 
 When you install composer and MySql you have to clone this project.<br>
 After that go to project folder and run command in console <br>
- * linux: open bush and write composer install 
- * windows: open cmd and write php composer install
+ * linux: open bush and write: composer install 
+ * windows: open cmd and write: php composer install
 
 I hope everything is working!<br>
 
