@@ -40,7 +40,7 @@ I prepared a .htaccess file (movie-api/public) if you want to use the apache ser
 When you have the composer and MySql installed, clone this project.<br>
 After that go to project's folder and run  this command in the console: <br>
 <ul>
- <li>linux: open bush and write composer install</li>
+ <li>linux: open bash and write composer install</li>
  <li>windows: open cmd and write php composer install</li>
 </ul>
 
