@@ -1,14 +1,15 @@
 <h1>Documentation</h1>
 
 This is simple web service to return information about movies and movie detatils. <br>
-Also You can add mark to movie <br>
+You can also add mark to movie <br>
 
 service use:
- * php version 7.2.15
- * MySql 5.7.25
- * Symfony 4.2^
- * Nginx 1.14.0
-
+<ul>
+ <li>php version 7.2.15</li>
+ <li>MySql 5.7.25</li>
+ <li>Symfony 4.2^</li>
+ <li>Nginx 1.14.0</li>
+</ul>
 <h2>Testing</h2>
 for testing this web service you can go to specifict adress <br>
 url directory repositories 
