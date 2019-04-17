@@ -11,8 +11,7 @@ service use:
  <li>Nginx 1.14.0</li>
 </ul>
 <h2>Testing</h2>
-for testing this web service you can go to specifict adress <br>
-url directory repositories 
+If you want testing this web service you can go to specifict url adress. List below
 <br>
 <h3>GET method</h3>
 <br>
