@@ -1,4 +1,3 @@
-# movie-api
 <h1>Documentation</h1>
 
 This is simple web service to return information about movies and movie detatils. <br>
