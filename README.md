@@ -11,7 +11,7 @@ service use:
  <li>Nginx 1.14.0</li>
 </ul>
 <h2>Usage</h2>
-If you want to test this web service you can go to one of those specific url adresses. 
+If you want to test this web service you can go to one of those specific url adresses.<br> 
 List is down below:
 <h3>GET method</h3>
 <ul>
