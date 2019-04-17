@@ -11,20 +11,16 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Movie;
 use App\Repository\MarkRepository;
-use App\Repository\MovieRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 
 class MarksController extends ApiController
 {
-    private $movieRepository;
     private $markRepository;
 
-    public function __construct(MarkRepository $markRepository, MovieRepository $movieRepository)
+    public function __construct(MarkRepository $markRepository)
     {
-        $this->movieRepository = $movieRepository;
         $this->markRepository = $markRepository;
     }
 
@@ -45,7 +41,7 @@ class MarksController extends ApiController
             return $this->respondValidationError('Podaj ocene filmu!');
         }
 
-        if ($request->get('mark_value') > 10) {
+        if ($request->get('mark_value') < 0 || $request->get('mark_value') > 10) {
             return $this->respondValidationError('Ocena ma złą wartość!');
         }
 

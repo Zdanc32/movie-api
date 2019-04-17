@@ -54,16 +54,28 @@ class MovieRepository extends ServiceEntityRepository
 
     public function  getAvgMark(Movie $movie)
     {
-        $entityManager = $this->getEntityManager();
+        /*$entityManager = $this->getEntityManager();
 
         $sql = "SELECT AVG(M.mark_value) AS avg_value 
                 FROM App\Entity\Mark AS M 
                 WHERE M.movie = :movie";
 
         $query = $entityManager->createQuery($sql)->setParameter('movie', $movie->getId());
-        $avg_mark_value = $query->execute();
+        $avg_mark_value = $query->execute();*/
 
-        return $avg_mark_value[0]['avg_value'];
+        $conn = $this->getEntityManager()->getConnection();
+
+        $sql = 'SELECT AVG(m.mark_value) AS mark_value 
+                FROM mark AS m
+                WHERE m.movie_id = :movie';
+
+        $stmt = $conn->prepare($sql);
+                
+        $stmt->execute(['movie' => $movie->getId()]);    
+
+        $avg_mark_value = $stmt->fetchAll();
+
+        return $avg_mark_value[0]['mark_value'];
     }
 
 }
