@@ -37,9 +37,11 @@ But you have to install some programs.
 </ul>
 <br> 
 I prepared a .htaccess file (movie-api/public) if you want to use the apache server.<br>
-When you have had the composer and MySql installed, clone this project.<br>
+When you have the composer and MySql installed, clone this project.<br>
 After that go to project's folder and run  this command in the console: <br>
- * linux: open bush and write composer install 
- * windows: open cmd and write php composer install
+<ul>
+ <li>linux: open bush and write composer install</li>
+ <li>windows: open cmd and write php composer install</li>
+</ul>
 
 I hope everything is working!<br>
