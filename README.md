@@ -20,7 +20,7 @@ If you want testing this web service you can go to specifict url adress. List be
 <h3>POST method</h3
 <ul>
  <li> http://104.248.246.56/marks/create/10/?mark_value=4 This method add mark to movie. <br>
-10 is movie id and mark_value is selected mark. Mark value can be less than 1 and bigger than 10
+10 is movie id and mark_value is selected mark. Mark value can not be less than 1 and bigger than 10
  </li>
 </ul>
 
