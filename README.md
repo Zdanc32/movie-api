@@ -1,7 +1,7 @@
 <h1>Documentation</h1>
 
-This is simple web service to return information about movies and movie detatils. <br>
-You can also add mark to movie <br>
+This is simple web service to return information about movies and movie details. <br>
+You can also add a mark to the movie of your choosing.<br>
 
 service use:
 <ul>
@@ -10,23 +10,29 @@ service use:
  <li>Symfony 4.2^</li>
  <li>Nginx 1.14.0</li>
 </ul>
-<h2>Testing</h2>
-If you want testing this web service you can go to specifict url adress. List below
+<h2>Usage</h2>
+If you want to test this web service you can go to one of those specific url adresses. 
+List is down below:
+<br>
 <h3>GET method</h3>
+<br>
 <ul>
- <li>http://104.248.246.56/movies return Json with all movies in the data base table</li>
- <li>http://104.248.246.56/movies/details/10 return Json with one record with movie details. Where 10 is movie id</li>
+ <li>http://104.248.246.56/movies Returns json with all movies in the data base table.</li>
+ <li>http://104.248.246.56/movies/details/10 Returns json with one record with the movie details. Where 10 is the movie id.</li>
 </ul>
-<h3>POST method</h3
+<br>
+<h3>POST method</h3>
+<br>
 <ul>
- <li> http://104.248.246.56/marks/create/10/?mark_value=4 This method add mark to movie. <br>
-10 is movie id and mark_value is selected mark. Mark value can not be less than 1 and bigger than 10
+ <li> http://104.248.246.56/marks/create/10/?mark_value=4 This method adds mark to the movie. <br>
+Where 10 is the movie id and mark_value is selected mark. Mark value cannot be less than 1 and bigger than 10.
  </li>
 </ul>
 
 <h2>Install</h2>
-If you want try to add something more to this service, you can download on you PC or Laptop and build this project. <br>
+If you want try to add something more to this service, you can download it on your PC or Laptop and build this project. <br>
 But you have to install some programs. 
+<br>
 <ul>
  <li>composer https://getcomposer.org/download/</li>
  <li>MySql https://dev.mysql.com/downloads/installer/</li>
@@ -34,16 +40,11 @@ But you have to install some programs.
  <li>nginx https://www.nginx.com/resources/wiki/start/</li>
  <li>apache2 https://www.apachefriends.org/pl/index.html </li> 
 </ul>
-I prepere file .htaccess (movie-api/public) if you want use apache server 
-
-When you install composer and MySql you have to clone this project.<br>
-After that go to project folder and run command in console <br>
- * linux: open bush and write: composer install 
- * windows: open cmd and write: php composer install
+<br> 
+I prepared a .htaccess file (movie-api/public) if you want to use the apache server.<br>
+When you have had the composer and MySql installed, clone this project.<br>
+After that go to project's folder and run  this command in the console: <br>
+ * linux: open bush and write composer install 
+ * windows: open cmd and write php composer install
 
 I hope everything is working!<br>
-
-
- 
-
- 
