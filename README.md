@@ -27,11 +27,13 @@ url directory repositories
 If you want try to add something more to this service, you can download on you PC or Laptop and build this project. <br>
 But you have to install some programs. 
 <br>
- * composer https://getcomposer.org/download/
- * MySql https://dev.mysql.com/downloads/installer/
- * Symfony https://symfony.com/doc/current/setup.html
- * nginx https://www.nginx.com/resources/wiki/start/
- * apache2 https://www.apachefriends.org/pl/index.html 
+<ul>
+ <li>composer https://getcomposer.org/download/</li>
+ <li>MySql https://dev.mysql.com/downloads/installer/</li>
+ <li>Symfony https://symfony.com/doc/current/setup.html</li>
+ <li>nginx https://www.nginx.com/resources/wiki/start/</li>
+ <li>apache2 https://www.apachefriends.org/pl/index.html </li> 
+</ul>
 <br> 
 I prepere file .htaccess (movie-api/public) if you want use apache server 
 
