@@ -42,10 +42,10 @@ But you have to install some programs.
 <br> 
 I prepere file .htaccess (movie-api/public) if you want use apache server 
 
-When you install composer and MySql you have to clone this project<br>
-then you have to select folder and run CMD or BUSH console and wirte simple command <br>
- * linux: composer install 
- * windows: php composer install
+When you install composer and MySql you have to clone this project.<br>
+After that go to project folder and run command in console <br>
+ * linux: open bush and write composer install 
+ * windows: open cmd and write php composer install
 
 I hope everything is working!<br>
 
