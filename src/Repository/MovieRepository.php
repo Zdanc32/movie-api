@@ -53,7 +53,7 @@ class MovieRepository extends ServiceEntityRepository
         return $moviesArray;
     }
 
-    public function  getAvgMark(Movie $movie)
+    public function getAvgMark(Movie $movie)
     {
         $entityManager = $this->getEntityManager()->getConnection();
 
